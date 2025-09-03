@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passconnect | Instant eSIMs & Airtime for Africa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+            color: #1E293B;
+            overflow-x: hidden;
+        }
+        .brand-primary { color: #1E3A8A; }
+        .bg-brand-primary { background-color: #1E3A8A; }
+        .border-brand-primary { border-color: #1E3A8A; }
+        .brand-accent { color: #F97316; }
+        .bg-brand-accent { background-color: #F97316; }
+        .border-brand-accent { border-color: #F97316; }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, #F8F9FA 0%, #E0E7FF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .scrolling-logos {
+            display: flex;
+            width: fit-content;
+            animation: scroll 25s linear infinite;
+        }
+        .logo-container:hover .scrolling-logos {
+            animation-play-state: paused;
+        }
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            padding: 0 24px;
+            margin: 0 16px;
+            border-radius: 9999px;
+            background-color: #F1F5F9;
+            flex-shrink: 0;
+            transition: background-color 0.2s ease;
+        }
+        .logo-item:hover {
+            background-color: #E2E8F0;
+        }
+        .logo-item span {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .logo-paystack { color: #011B33; }
+        .logo-n8n { background-color: #8A55F7; color: white; }
+        .logo-esim { color: #1E3A8A; }
+        .logo-reloadly { color: #F97316; }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .slide-in-animation {
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+        .phone-content-item {
+            display: none;
+            text-align: center;
+        }
+        .phone-content-item.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="py-6 relative z-10">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-extrabold brand-primary leading-none" style="font-family: 'Poppins', sans-serif;">Passconnect</h1>
+            </div>
+            <a href="#waitlist" class="bg-brand-accent text-white font-semibold py-2 px-5 rounded-full hover:opacity-90 transition-opacity">Join Waitlist</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-gradient pt-16 pb-24 md:pt-24 md:pb-32">
+            <div class="floating-orb w-48 h-48 bg-orange-200 top-20 -left-20" style="animation-delay: 0s;"></div>
+            <div class="floating-orb w-64 h-64 bg-blue-200 bottom-10 -right-24" style="animation-delay: 2s;"></div>
+            
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h2 class="text-4xl md:text-6xl font-extrabold brand-primary tracking-tight leading-tight fade-in-up">From Touchdown to Connected in 60 Seconds.</h2>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mt-4 mb-8 fade-in-up" style="transition-delay: 150ms;">Stop the stressful search for local SIM cards. With Passconnect, you can buy and activate a local eSIM before you even land. Be online the moment your plane's wheels touch the tarmac.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 fade-in-up" style="transition-delay: 300ms;">
+                    <a href="#waitlist" class="bg-brand-accent text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition-transform transform hover:scale-105 w-full sm:w-auto">Get Free & Exclusive Early Access</a>
+                </div>
+                <div class="mt-8 text-slate-500 text-sm font-medium flex justify-center items-center gap-4 fade-in-up" style="transition-delay: 450ms;">
+                    <span>✓ Pre-Arrival Activation</span>
+                    <span>✓ Instant Network Connection</span>
+                    <span>✓ 24/7 Support</span>
+                </div>
+                 <div class="mt-20 fade-in-up" style="transition-delay: 600ms;">
+                    <div class="relative mx-auto border-gray-800 bg-gray-800 border-[10px] rounded-[2.5rem] h-[550px] w-[280px] shadow-xl">
+                        <div class="w-[140px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+                        <div class="h-[40px] w-[3px] bg-gray-800 absolute -start-[13px] top-[100px] rounded-s-lg"></div>
+                        <div class="h-[40px] w-[3px] bg-gray-800 absolute -start-[13px] top-[150px] rounded-s-lg"></div>
+                        <div class="h-[60px] w-[3px] bg-gray-800 absolute -end-[13px] top-[120px] rounded-e-lg"></div>
+                        <div class="rounded-[2rem] overflow-hidden w-full h-full bg-blue-100 flex flex-col items-center justify-center p-4 relative">
+                            <div class="absolute top-2 left-0 right-0 px-4 flex justify-between items-center text-xs font-bold text-slate-700">
+                                <span id="phone-time">9:41 AM</span>
+                                <span>📶 LTE</span>
+                            </div>
+                            <div id="phone-content-container" class="w-full h-full flex flex-col items-center justify-center">
+                                <!-- Dynamic content will be injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-6 fade-in-up">
+                <h3 class="text-center text-sm font-bold text-slate-500 tracking-widest uppercase mb-6">Built on a Foundation of World-Class Technology</h3>
+                <div class="logo-container">
+                    <div class="scrolling-logos">
+                        <div class="logo-item"><span class="logo-paystack">Paystack</span></div>
+                        <div class="logo-item logo-n8n"><span>n8n</span></div>
+                        <div class="logo-item"><span class="logo-esim">Global eSIM Network</span></div>
+                        <div class="logo-item"><span class="logo-reloadly">Reloadly</span></div>
+                        <!-- Duplicates for seamless loop -->
+                        <div class="logo-item"><span class="logo-paystack">Paystack</span></div>
+                        <div class="logo-item logo-n8n"><span>n8n</span></div>
+                        <div class="logo-item"><span class="logo-esim">Global eSIM Network</span></div>
+                        <div class="logo-item"><span class="logo-reloadly">Reloadly</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h3 class="text-3xl md:text-4xl font-extrabold brand-primary fade-in-up">Instant Connectivity in 3 Simple Steps</h3>
+                    <p class="text-slate-600 mt-3 fade-in-up" style="transition-delay: 150ms;">From landing to browsing in minutes. It’s that easy.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="fade-in-up" style="transition-delay: 300ms;">
+                        <div class="bg-blue-100 text-brand-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">1</div>
+                        <h4 class="text-xl font-bold mt-6 mb-2">Select Your Destination</h4>
+                        <p class="text-slate-500">Choose from our growing list of African countries, starting with Nigeria, Ghana, Côte d'Ivoire, Kenya, and Senegal.</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 450ms;">
+                        <div class="bg-blue-100 text-brand-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">2</div>
+                        <h4 class="text-xl font-bold mt-6 mb-2">Choose Your Plan & Pay</h4>
+                        <p class="text-slate-500">Pick the perfect data plan for your trip and pay securely with your card or mobile money via Paystack.</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 600ms;">
+                        <div class="bg-blue-100 text-brand-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">3</div>
+                        <h4 class="text-xl font-bold mt-6 mb-2">Scan & Activate Instantly</h4>
+                        <p class="text-slate-500">Receive your eSIM QR code immediately in the app. Scan it with your phone's camera, and you're online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 md:py-24 bg-white relative overflow-hidden">
+            <div class="floating-orb w-56 h-56 bg-orange-100 top-10 -right-20" style="animation-delay: 1s;"></div>
+            <div class="floating-orb w-40 h-40 bg-blue-100 bottom-0 -left-10" style="animation-delay: 3s;"></div>
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                     <div class="fade-in-up">
+                        <p class="text-3xl mb-3">⚡</p>
+                        <h4 class="font-bold text-lg">Instant eSIM Activation</h4>
+                        <p class="text-slate-500 mt-1">No more waiting. Get your digital SIM delivered and activated in seconds.</p>
+                    </div>
+                     <div class="fade-in-up" style="transition-delay: 150ms;">
+                        <p class="text-3xl mb-3">🌍</p>
+                        <h4 class="font-bold text-lg">Pan-African Coverage</h4>
+                        <p class="text-slate-500 mt-1">One app for all your travels across the continent. We're constantly adding new countries.</p>
+                    </div>
+                     <div class="fade-in-up" style="transition-delay: 300ms;">
+                        <p class="text-3xl mb-3">💳</p>
+                        <h4 class="font-bold text-lg">Secure In-App Payments</h4>
+                        <p class="text-slate-500 mt-1">Powered by Paystack, your payments are safe, secure, and seamless.</p>
+                    </div>
+                     <div class="fade-in-up" style="transition-delay: 450ms;">
+                        <p class="text-3xl mb-3">📲</p>
+                        <h4 class="font-bold text-lg">24/7 Airtime & Data Top-Ups</h4>
+                        <p class="text-slate-500 mt-1">Run out of data? Top up any number, anytime, directly from the app.</p>
+                    </div>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 600ms;">
+                    <div class="relative mx-auto border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
+                        <div class="rounded-lg overflow-hidden h-full bg-blue-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <h3 class="text-xl md:text-3xl font-bold brand-primary">Your Passconnect Dashboard</h3>
+                                <p class="text-xs md:text-sm text-slate-600 mt-2">Manage all your eSIMs in one place.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative mx-auto bg-gray-900 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
+                        <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <div class="relative w-full max-w-xl mx-auto rounded-lg overflow-hidden shadow-2xl fade-in-up" style="transition-delay: 300ms;">
+                    <div class="h-64 bg-slate-800 flex items-center justify-center relative bg-cover bg-center" style="background-image: url('https://placehold.co/800x400/1E293B/1E293B?text=%20');">
+                        <div class="absolute inset-0 bg-blue-900/50"></div>
+                        <div class="relative text-white text-center p-8">
+                             <h3 class="text-3xl md:text-4xl font-extrabold fade-in-up">OUR TEAM</h3>
+                             <p class="mt-3 mb-8 fade-in-up" style="transition-delay: 150ms;">Our team of engineers and designers is dedicated to making travel connectivity across Africa seamless and reliable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <h3 class="text-3xl md:text-4xl font-extrabold brand-primary fade-in-up">Loved by Early Adopters</h3>
+                <p class="text-slate-600 mt-3 mb-12 fade-in-up" style="transition-delay: 150ms;">We're building Passconnect with travelers, for travelers. Here's what our first users are saying.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-lg text-left fade-in-up" style="transition-delay: 300ms;">
+                        <p class="text-slate-800 mb-4 font-medium">"As a Nigerian who travels to Ghana for business constantly, the SIM card stress at the airport was my least favorite part of every trip. The idea of activating an eSIM *before* I land is a complete game-changer. This is the solution I've been waiting for."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/100x100/E2E8F0/1E293B?text=TA" alt="Tunde Adebayo" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-slate-900 brand-primary">Tunde Adebayo</p>
+                                <p class="text-sm text-slate-500">Business Traveler, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg text-left fade-in-up" style="transition-delay: 450ms;">
+                        <p class="text-slate-800 mb-4 font-medium">"Gérer mes affaires à travers l'Afrique de l'Ouest signifie que je ne peux pas me permettre d'être déconnectée. Passconnect élimine ce souci. C'est une solution élégante à un problème coûteux."</p>
+                        <p class="text-slate-600 text-sm italic mb-4">"Managing business across West Africa means I can't afford to be disconnected. Passconnect removes that worry. It's an elegant solution to a costly problem."</p>
+                        <div class="flex items-center">
+                             <img src="https://placehold.co/100x100/E2E8F0/1E293B?text=AD" alt="Aïssata Diallo" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-slate-900 brand-accent">Aïssata Diallo</p>
+                                <p class="text-sm text-slate-500">Entrepreneur, Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg text-left fade-in-up" style="transition-delay: 600ms;">
+                        <p class="text-slate-800 mb-4 font-medium">"As a digital nomad based in Accra, having reliable data is my lifeline. The ability to manage eSIMs and top up data for different countries in one app is exactly what the remote work community in Africa needs. This is a must-have."</p>
+                        <div class="flex items-center">
+                             <img src="https://placehold.co/100x100/E2E8F0/1E293B?text=KA" alt="Kwame Asante" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-slate-900 text-green-600">Kwame Asante</p>
+                                <p class="text-sm text-slate-500">Digital Nomad, Ghana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="waitlist" class="py-16 md:py-24 hero-gradient relative overflow-hidden">
+             <div class="floating-orb w-56 h-56 bg-orange-200 top-10 -right-20" style="animation-delay: 1s;"></div>
+            <div class="floating-orb w-40 h-40 bg-blue-200 bottom-0 -left-10" style="animation-delay: 3s;"></div>
+
+            <div class="container mx-auto px-6 text-center max-w-2xl relative z-10">
+                <h3 class="text-3xl md:text-4xl font-extrabold brand-primary fade-in-up">Be the First to Experience Seamless Travel.</h3>
+                <p class="text-slate-600 mt-3 mb-8 fade-in-up" style="transition-delay: 150ms;">Join our exclusive waitlist to get free, early access to the Passconnect app and help shape the future of travel in Africa.</p>
+
+                <div id="form-container" class="fade-in-up" style="transition-delay: 300ms;">
+                    <form id="waitlist-form" class="max-w-md mx-auto space-y-4">
+                        <input type="hidden" name="access_key" value="b0ddde71-45dd-4976-b317-2befd00e9870">
+                        <input type="hidden" name="subject" value="New Passconnect Waitlist Signup!">
+                        <input type="hidden" name="from_name" value="Passconnect Landing Page">
+                        
+                        <input type="text" name="name" placeholder="Your Full Name" required class="w-full px-4 py-3 rounded-lg border-slate-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition" />
+                        <input type="email" name="email" placeholder="Enter your email address" required class="w-full px-4 py-3 rounded-lg border-slate-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition" />
+                        <textarea name="message" placeholder="Optional: Share your biggest travel connectivity challenge..." class="w-full px-4 py-3 rounded-lg border-slate-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition" rows="3"></textarea>
+                        
+                        <button type="submit" class="bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity w-full">Join Waitlist</button>
+                    </form>
+                </div>
+                
+                <div id="success-message" class="hidden max-w-md mx-auto bg-green-100 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
+                    <p class="font-bold">Thank you! You're on the list.</p>
+                    <p class="text-sm">We'll notify you as soon as Passconnect is live.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-slate-800 text-slate-400">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 Passconnect. Arrive Connected.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fade-in on Scroll Animation
+            const fadeInElements = document.querySelectorAll('.fade-in-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            fadeInElements.forEach(el => observer.observe(el));
+
+            // Web3Forms Logic
+            const form = document.getElementById('waitlist-form');
+            const formContainer = document.getElementById('form-container');
+            const successMessage = document.getElementById('success-message');
+
+            if(form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(form);
+                    const object = {};
+                    formData.forEach((value, key) => {
+                        object[key] = value;
+                    });
+                    const json = JSON.stringify(object);
+                    
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let jsonResponse = await response.json();
+                        if (response.status == 200) {
+                            formContainer.classList.add('hidden');
+                            successMessage.classList.remove('hidden');
+                        } else {
+                            console.log(response);
+                            alert('Something went wrong. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        alert('An error occurred. Please try again later.');
+                    });
+                });
+            }
+
+            // Dynamic Phone Mockup Content
+            const phoneContentContainer = document.getElementById('phone-content-container');
+            const phoneTimeEl = document.getElementById('phone-time');
+            const countries = [
+                { name: 'Nigeria', flag: '🇳🇬' },
+                { name: 'Ghana', flag: '🇬🇭' },
+                { name: 'Côte d\'Ivoire', flag: '🇨🇮' },
+                { name: 'Kenya', flag: '🇰🇪' },
+                { name: 'Senegal', flag: '🇸🇳' }
+            ];
+            let currentCountryIndex = 0;
+
+            function updatePhoneContent() {
+                const country = countries[currentCountryIndex];
+                if(phoneContentContainer){
+                    phoneContentContainer.innerHTML = `
+                        <div class="phone-content-item active slide-in-animation">
+                            <h3 class="text-2xl font-bold brand-primary mb-2">${country.flag} Welcome to ${country.name}!</h3>
+                            <p class="text-slate-600 text-center text-sm mb-4">Your 10GB eSIM is ready to activate.</p>
+                            <div class="w-24 h-24 bg-white rounded-lg flex items-center justify-center font-mono text-xs">QR CODE</div>
+                            <button class="mt-4 bg-brand-accent text-white font-bold py-2 px-6 rounded-full w-full">Activate Now</button>
+                        </div>
+                    `;
+                }
+                currentCountryIndex = (currentCountryIndex + 1) % countries.length;
+            }
+
+            function updatePhoneTime() {
+                if(phoneTimeEl) {
+                    const now = new Date();
+                    const hours = String(now.getHours()).padStart(2, '0');
+                    const minutes = String(now.getMinutes()).padStart(2, '0');
+                    phoneTimeEl.textContent = `${hours}:${minutes}`;
+                }
+            }
+
+            if(phoneContentContainer) {
+                updatePhoneContent();
+                setInterval(updatePhoneContent, 4000);
+            }
+            if(phoneTimeEl) {
+                updatePhoneTime();
+                setInterval(updatePhoneTime, 60000);
+            }
+        });
+    </script>
+</body>
+</html>
+
